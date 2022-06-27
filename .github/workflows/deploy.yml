@@ -42,8 +42,6 @@ jobs:
           python-version: ${{ matrix.image.python_version }}
       - name: Install Dependencies
         run: python -m pip install docker pytest
-      - name: Update setuptools
-        run: python -m pip install --upgrade setuptools
       - name: Deploy Image
         run: bash scripts/build-push.sh
         env:
